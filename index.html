@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-['Poppins']">
+    <!-- Navbar -->
+    <nav class="bg-white/80 backdrop-blur-md shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center py-4 sm:py-5">
+                <div class="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Portfolio</div>
+                <div class="hidden md:flex space-x-4 lg:space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">About</a>
+                    <a href="#skills" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Skills</a>
+                    <a href="#projects" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Projects</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
+                    <i class="fas fa-bars text-xl sm:text-2xl text-gray-700 hover:text-blue-600 transition-colors duration-300"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed w-full bg-white/90 backdrop-blur-md shadow-lg z-40 top-16">
+        <div class="container mx-auto px-4 sm:px-6 py-4 sm:py-6 space-y-4 sm:space-y-6">
+            <a href="#home" class="block text-gray-700 hover:text-blue-600 transition-colors duration-300 py-2">Home</a>
+            <a href="#about" class="block text-gray-700 hover:text-blue-600 transition-colors duration-300 py-2">About</a>
+            <a href="#skills" class="block text-gray-700 hover:text-blue-600 transition-colors duration-300 py-2">Skills</a>
+            <a href="#projects" class="block text-gray-700 hover:text-blue-600 transition-colors duration-300 py-2">Projects</a>
+            <a href="#contact" class="block text-gray-700 hover:text-blue-600 transition-colors duration-300 py-2">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20 sm:pt-24 min-h-screen flex items-center relative bg-fixed bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1555066931-bf19f8fd1085?ixlib=rb-4.0.0&auto=format&fit=crop&w=1920&q=80');">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center">
+                <div class="mb-8 sm:mb-10 transform hover:scale-105 transition-transform duration-500">
+                    <img src="profile.jpg" alt="Profile Picture" class="w-40 h-40 sm:w-52 sm:h-52 rounded-full mx-auto border-4 border-blue-500 shadow-2xl object-cover hover:border-purple-500 transition-colors duration-300">
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-bold text-white mb-4 sm:mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Bipin Shrestha</h1>
+                <h2 class="text-3xl sm:text-5xl font-bold text-white mb-4 sm:mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Full Stack Developer</h2>
+                <p class="text-xl sm:text-2xl text-gray-300 mb-8 sm:mb-10 font-light">Crafting digital solutions with passion and precision</p>
+                <a href="#contact" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 sm:py-24 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-fixed bg-cover bg-center opacity-5" style="background-image: url('https://images.unsplash.com/photo-1555066931-bf19f8fd1085?ixlib=rb-4.0.0&auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">About Me</h2>
+            <div class="max-w-3xl mx-auto text-gray-700 leading-relaxed px-4">
+                <p class="mb-6 text-base sm:text-lg">
+                    I am a passionate Full Stack Developer with expertise in both front-end and back-end development.
+                    With a strong foundation in multiple programming languages and frameworks, I create efficient and
+                    scalable solutions for complex problems.
+                </p>
+                <p class="text-base sm:text-lg">
+                    My experience spans across web development, mobile applications, and database management,
+                    allowing me to build complete, end-to-end solutions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 sm:py-24 relative">
+        <div class="absolute inset-0 bg-fixed bg-cover bg-center opacity-5" style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.0&auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Skills</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-8">
+                <div class="skill-card transform hover:scale-105 transition-all duration-300 bg-white rounded-xl shadow-lg p-4 sm:p-6">
+                    <i class="fab fa-php text-4xl sm:text-5xl mb-3 sm:mb-4 text-blue-600"></i>
+                    <span class="font-medium text-sm sm:text-base">PHP</span>
+                </div>
+                <div class="skill-card transform hover:scale-105 transition-all duration-300 bg-white rounded-xl shadow-lg p-4 sm:p-6">
+                    <i class="fab fa-java text-4xl sm:text-5xl mb-3 sm:mb-4 text-blue-600"></i>
+                    <span class="font-medium text-sm sm:text-base">Java</span>
+                </div>
+                <div class="skill-card transform hover:scale-105 transition-all duration-300 bg-white rounded-xl shadow-lg p-4 sm:p-6">
+                    <i class="fab fa-js text-4xl sm:text-5xl mb-3 sm:mb-4 text-blue-600"></i>
+                    <span class="font-medium text-sm sm:text-base">JavaScript</span>
+                </div>
+                <div class="skill-card transform hover:scale-105 transition-all duration-300 bg-white rounded-xl shadow-lg p-4 sm:p-6">
+                    <i class="fab fa-css3 text-4xl sm:text-5xl mb-3 sm:mb-4 text-blue-600"></i>
+                    <span class="font-medium text-sm sm:text-base">CSS</span>
+                </div>
+                <div class="skill-card transform hover:scale-105 transition-all duration-300 bg-white rounded-xl shadow-lg p-4 sm:p-6">
+                    <i class="fab fa-html5 text-4xl sm:text-5xl mb-3 sm:mb-4 text-blue-600"></i>
+                    <span class="font-medium text-sm sm:text-base">HTML</span>
+                </div>
+                <div class="skill-card transform hover:scale-105 transition-all duration-300 bg-white rounded-xl shadow-lg p-4 sm:p-6">
+                    <i class="fab fa-android text-4xl sm:text-5xl mb-3 sm:mb-4 text-blue-600"></i>
+                    <span class="font-medium text-sm sm:text-base">Android</span>
+                </div>
+                <div class="skill-card transform hover:scale-105 transition-all duration-300 bg-white rounded-xl shadow-lg p-4 sm:p-6">
+                    <i class="fab fa-windows text-4xl sm:text-5xl mb-3 sm:mb-4 text-blue-600"></i>
+                    <span class="font-medium text-sm sm:text-base">.NET</span>
+                </div>
+                <div class="skill-card transform hover:scale-105 transition-all duration-300 bg-white rounded-xl shadow-lg p-4 sm:p-6">
+                    <i class="fas fa-code text-4xl sm:text-5xl mb-3 sm:mb-4 text-blue-600"></i>
+                    <span class="font-medium text-sm sm:text-base">C/C#</span>
+                </div>
+                <div class="skill-card transform hover:scale-105 transition-all duration-300 bg-white rounded-xl shadow-lg p-4 sm:p-6">
+                    <i class="fas fa-database text-4xl sm:text-5xl mb-3 sm:mb-4 text-blue-600"></i>
+                    <span class="font-medium text-sm sm:text-base">MySQL</span>
+                </div>
+                <div class="skill-card transform hover:scale-105 transition-all duration-300 bg-white rounded-xl shadow-lg p-4 sm:p-6">
+                    <i class="fab fa-laravel text-4xl sm:text-5xl mb-3 sm:mb-4 text-blue-600"></i>
+                    <span class="font-medium text-sm sm:text-base">Laravel</span>
+                </div>
+                <div class="skill-card transform hover:scale-105 transition-all duration-300 bg-white rounded-xl shadow-lg p-4 sm:p-6">
+                    <i class="fab fa-react text-4xl sm:text-5xl mb-3 sm:mb-4 text-blue-600"></i>
+                    <span class="font-medium text-sm sm:text-base">React JS</span>
+                </div>
+                <div class="skill-card transform hover:scale-105 transition-all duration-300 bg-white rounded-xl shadow-lg p-4 sm:p-6">
+                    <i class="fab fa-figma text-4xl sm:text-5xl mb-3 sm:mb-4 text-blue-600"></i>
+                    <span class="font-medium text-sm sm:text-base">Figma</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 sm:py-24 bg-white relative">
+        <div class="absolute inset-0 bg-fixed bg-cover bg-center opacity-5" style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.0&auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Projects</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10">
+                <!-- maze Project -->
+                <div class="project-card group flex flex-col h-full bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
+                    <div class="relative overflow-hidden">
+                        <img src="maze.png" alt="Maze Project" class="w-full h-48 sm:h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <a href="https://github.com/Bipinstha77/Maze-Generation-and-solver" target="_blank" class="bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-blue-700 transform hover:scale-105 transition-all duration-300">View Project</a>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-gray-800">Maze Game</h3>
+                        <p class="text-gray-600 flex-grow text-base sm:text-lg">A maze game with a solver that solves the maze using the A* algorithm.</p>
+                        <div class="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-3">
+                            <span class="text-xs sm:text-sm bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-3 sm:px-4 py-1 sm:py-2 rounded-full">JavaScript</span>
+                            <span class="text-xs sm:text-sm bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-3 sm:px-4 py-1 sm:py-2 rounded-full">HTML5</span>
+                            <span class="text-xs sm:text-sm bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-3 sm:px-4 py-1 sm:py-2 rounded-full">CSS3</span>
+                            <span class="text-xs sm:text-sm bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-3 sm:px-4 py-1 sm:py-2 rounded-full">PHP</span>
+                            <span class="text-xs sm:text-sm bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-3 sm:px-4 py-1 sm:py-2 rounded-full">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Admin Portal -->
+                <div class="project-card group flex flex-col h-full bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
+                    <div class="relative overflow-hidden">
+                        <img src="Admin.png" alt="Musical Instrument Portal" class="w-full h-48 sm:h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <a href="https://github.com/Bipinstha77/React_Admin" target="_blank" class="bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-blue-700 transform hover:scale-105 transition-all duration-300">View Project</a>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-gray-800">Admin Portal</h3>
+                        <p class="text-gray-600 flex-grow text-base sm:text-lg">An admin portal for managing the orders and products using react js.</p>
+                        <div class="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-3">
+                            <span class="text-xs sm:text-sm bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-3 sm:px-4 py-1 sm:py-2 rounded-full">React JS</span>
+                            <span class="text-xs sm:text-sm bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-3 sm:px-4 py-1 sm:py-2 rounded-full">HTML5</span>
+                            <span class="text-xs sm:text-sm bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-3 sm:px-4 py-1 sm:py-2 rounded-full">CSS3</span>
+                            <span class="text-xs sm:text-sm bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-3 sm:px-4 py-1 sm:py-2 rounded-full">MySQL</span>
+                            <span class="text-xs sm:text-sm bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-3 sm:px-4 py-1 sm:py-2 rounded-full">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clothing store Project -->
+                <div class="project-card group flex flex-col h-full bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
+                    <div class="relative overflow-hidden">
+                        <img src="clothing.png" alt="ORB Food Project" class="w-full h-48 sm:h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <a href="https://github.com/Bipinstha77/Clothing-store" target="_blank" class="bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-blue-700 transform hover:scale-105 transition-all duration-300">View Project</a>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-gray-800">Clothing Store</h3>
+                        <p class="text-gray-600 flex-grow text-base sm:text-lg">A clothing store website with a shopping cart system and esewa as payment gateway.</p>
+                        <div class="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-3">
+                            <span class="text-xs sm:text-sm bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-3 sm:px-4 py-1 sm:py-2 rounded-full">PHP</span>
+                            <span class="text-xs sm:text-sm bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-3 sm:px-4 py-1 sm:py-2 rounded-full">MySQL</span>
+                            <span class="text-xs sm:text-sm bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-3 sm:px-4 py-1 sm:py-2 rounded-full">JavaScript</span>
+                            <span class="text-xs sm:text-sm bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-3 sm:px-4 py-1 sm:py-2 rounded-full">HTML5</span>
+                            <span class="text-xs sm:text-sm bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-3 sm:px-4 py-1 sm:py-2 rounded-full">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Contact Me</h2>
+            <div class="text-center">
+                <a href="mailto:sthabipin29@gmail.com" 
+                   class="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-colors duration-300">
+                    <i class="fas fa-envelope mr-2"></i>
+                    Get in Touch with me
+                </a>
+                <p class="mt-6 text-gray-600">I'll get back to you as soon as possible!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-8 sm:py-12">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Bipin Shrestha</h3>
+                    <p class="text-gray-400 mt-2 text-sm sm:text-base">Full Stack Developer</p>
+                </div>
+                <div class="flex space-x-4 sm:space-x-6">
+                    <a href="https://github.com/Bipinstha77" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-github text-xl sm:text-2xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/bipin-shrestha-8b337b246/" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-linkedin text-xl sm:text-2xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100008715931826" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-facebook text-xl sm:text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-gray-400 text-sm sm:text-base">
+                <p>&copy; 2023 Bipin Shrestha. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add this before closing body tag -->
+    <script src="script.js"></script>
+</body>
+</html>
